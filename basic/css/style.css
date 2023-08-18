@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'Arial', sans-serif;
+
+}
+
+
+body{
+  background: whitesmoke;
+
+ }
+/* HEADINGS */
+
+p{
+  
+  text-align: center;
+  line-height: 1.4;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+h2 {
+  color: #ff0000;
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+/* BASIC SETUP */
+
+.page-wrapper {
+  width: 100%;
+  height: auto;
+ 
+}
+
+.nav-wrapper {
+  width: 100%;
+  padding: 5px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color:#ffffff;
+
+}
+
+.grad-bar {
+  width: 100%;
+  height: 10px;
+
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  	-webkit-animation: gradbar 15s ease infinite;
+	-moz-animation: gradbar 15s ease infinite;
+	animation: gradbar 15s ease infinite;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  height: 50px;
+  overflow: hidden;
+}
+
+.navbar img {
+  height: 16px;
+  width: auto;
+  justify-self: start;
+
+}
+
+.navbar ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  justify-self: end;
+  
+}
+
+.nav-item a {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 400;
+     
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+
+.nav-item a:hover {
+ margin-top: 10px;
+  color: #a20fcf;
+ 
+
+}
+
+.btn{
+  background-color: black;
+  color: #fff;
+  font-weight: 800;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 0.5s;
+
+}
+.btn:hover{
+  background-color: #fff;
+  color: #3f3f3f;
+transition: all 0.5s;
+  
+}
+.btn:active{
+  background-color: #1296ad;
+ 
+
+  
+}
+/* SECTIONS */
+
+.headline {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background:url(https://nypost.com/wp-content/uploads/sites/2/2014/02/v-day-tv-shows.jpg?quality=75&amp;strip=all&amp;w=1024);
+  background-size: cover;
+  display: flex;
+
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features {
+  width: 100%;
+  height: auto;
+  background-color: #ffffffa1;
+  display: flex;
+  padding: 50px 20px;
+  justify-content: space-around;
+}
+
+.feature-container {
+  background-color: #fffcfc;
+  border-radius: 70px;
+  padding: 50px;
+  flex-basis: 30%;
+  margin-top: 10px;
+}
+
+.feature-container p {
+
+  font-weight: 900;
+  text-align: center;
+  line-height: 2.4;
+  margin-bottom: 15px;
+}
+
+.feature-container img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+
+
+/* MOBILE MENU & ANIMATION */
+
+.menu-toggle .bar{
+  width: 25px;
+  height: 3px;
+  background-color: #3f3f3f;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: 25px;
+  display: none;
+}
+
+.menu-toggle:hover{
+  cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2){
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1){
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3){
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* KEYFRAME ANIMATIONS */
+
+@-webkit-keyframes gradbar {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes gradbar {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes gradbar {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/* Media Queries */
+
+  /* Mobile Devices - Phones/Tablets */
+
+@media only screen and (max-width: 720px) { 
+  .features {
+    flex-direction: column;
+    padding: 50px;
+  }
+  
+  /* MOBILE HEADINGS */
+  
+  h1 {
+    font-size: 1.9rem;
+  }
+  
+  h2 {
+    font-size: 1rem;
+  }
+  
+  p {
+    font-size: 0.8rem;
+  }
+  
+  /* MOBILE NAVIGATION */
+     
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: start;
+    top: 55px;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 55px);
+    transform: translate(-101%);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .navbar li {
+    padding: 15px;
+  }
+  
+  .navbar li:first-child {
+    margin-top: 50px;
+  }
+  
+  .navbar li a {
+    font-size: 1rem;
+  }
+   
+  .menu-toggle, .bar {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .mobile-nav {
+  transform: translate(0%)!important;
+}
+  
+  /* SECTIONS */
+  
+  .headline {
+    height: 20vh;
+  }
+    
+  .feature-container p {
+    margin-bottom: 25px;
+  }
+  
+  .feature-container {
+    margin-top: 20px;
+  }
+  
+  .feature-container:nth-child(2) {
+    order: -1;
+  }
+  
+  /* SEARCH DISABLED ON MOBILE */
+  
+  #search-icon {
+    display: none;
+  }
+  
+  .search-input {
+  display: none;
+ }
+  
+}
+/*hakkımızda*/
+.hak{
+
+background-attachment: fixed;
+background-size: cover;
+
+  padding: 50px;
+
+}
+
+.hakkımızda{
+ 
+opacity: 0.8;
+  font-size: 1.1rem;
+  -webkit-box-align: center;
+margin: auto;
+ width: 80%;
+
+}
+
+/*footer*/
+.footer{
+  margin-top: 50px;
+  height: 100px;
+background-color: #ffffff;
+width: 100%;
+
+}
+.copy{
+  color: #3f3f3f;
+  padding:40px;
+}
